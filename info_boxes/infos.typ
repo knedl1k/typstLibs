@@ -1,5 +1,5 @@
 #import "./colors.typ": *
-#set text(font: "New Computer Modern", lang: "cs", size:10.5pt)
+#set text(font: "New Computer Modern", lang: "en", size:10.5pt)
 
 
 #let info-settings = (
@@ -10,8 +10,8 @@
         stroke_color: ugent-blue,
     ),
     definition: (
-        prefix: [ #underline(smallcaps[*Definition*])#smallcaps[:]],
-        icon: "todo2",
+        prefix: [#smallcaps[*Definition*]#smallcaps[:]],
+        icon: "pencil",
         fill_color: caribbean-current.lighten(90%),
         stroke_color: caribbean-current,
     ),
@@ -79,7 +79,7 @@
     )[
         #let contents = if icon {
             (
-                image("./assets/solid/" + settings.icon + ".svg", width: 32pt),
+                image("./assets/solid/" + settings.icon + ".svg", width: 24pt),
                 {
                     settings.prefix
                     body
@@ -118,5 +118,19 @@ footer: "Definition usually have a source in the footer") \
 
 \ 
 
-#info-box("Prdel meow meow meow meow")
+#info-box("info",kind:"info")
+\
+#info-box("definition",kind:"definition")
+\
+#info-box("question",kind:"question")
+\
+//#info-box("Meow",kind:"important")
+\
+#info-box("conclusion",kind:"conclusion")
+\
+#info-box("good",kind:"good")
+\
+#info-box("note",kind:"note")
+\
+
 //#info-box("Hostify neni revoluce")
